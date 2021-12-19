@@ -11,21 +11,37 @@ import {
     MyModel
 
 } from '../components/stylesComp/cardStyle';
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import { AiFillHeart, AiOutlineHeart, AiOutlineArrowRight } from 'react-icons/ai';
 import Model from './Model';
-
-
-
+import {LikeContext } from '../context/LikeContext';
 
 export default function Card(props) {
     const [open, setOpen] = useState(false);
-
+ 
     const openModel = () => {
-        setOpen(prev=> !prev);
+        setOpen(prev => !prev);
     }
 
-    const {character}= props;
+    const {like, setLike,likeControl} =  useContext(LikeContext);
+
+    const [value, setValue] = useState('');
+    const { character} = props;
+
+ 
+    const handleLikes = (id) => {
+       
+       
+        const value = likeControl(like, id);
+        
+        if (value.id === id) {
+            setValue(value);
+            setLike(!like);
+            
+  }
+
+          
+    }
     return (
         <>
     
@@ -46,8 +62,8 @@ export default function Card(props) {
                 </InfoContainer>
                 
             </div>
-            <LikeIcon>
-                <AiFillHeart size="25px" color="E9E84E"/>
+            <LikeIcon onClick={(e)=>handleLikes(character.id)}>
+               {!value.like?<AiOutlineHeart size="25px" color="E9E84E"/>: <AiFillHeart size="25px" color="E9E84E"/>}
             </LikeIcon >
             <Button onClick={openModel}>
               
@@ -58,7 +74,7 @@ export default function Card(props) {
                 
             </Button>
             <MyModel>
-            <Model data={character} openModel={open} setOpenModel={setOpen }/>
+            <Model data={character}handleLikes={handleLikes} openModel={open} like={value.like} setOpenModel={setOpen }/>
             </MyModel>
             </Container>
             </>
