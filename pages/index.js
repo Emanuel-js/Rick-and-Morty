@@ -30,6 +30,7 @@ export default function Home() {
               results {
                 name
                 id
+                species
                 location {
                   name
                   id
