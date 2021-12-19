@@ -77,6 +77,7 @@ export const Header = styled.div`
 		margin-left: 25px;
 		text-align: center;
 		margin-top: 5px;
+		cursor: pointer;
 	}
 `;
 

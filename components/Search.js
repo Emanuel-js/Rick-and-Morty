@@ -1,27 +1,24 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { BiSearch } from 'react-icons/bi';
-
+import { useRouter} from 'next/router';
  const Search = () => {
-    const [search, setSearch] = useState("");
-
-  const handleChange = async(event) => {
+   const [search, setSearch] = useState("");
+   const router = useRouter();
+   
+  const handleChange = (event) => {
     event.preventDefault();
-            const results = await fetch("/api/characters", {
-              method: "post",
-              body: search,
-            });
-            const { characters, error } = await results.json();
-            if (error) {
-             console.log(error);
-            } else {
-                // redirect('search');
-                console.log(characters)
-            //  setCharacters(characters);
-            }
-          
+
+    if (search !=="") {
+      router.push({
+        pathname: '/search',
+        query:{search}
+      });
+    }
+   
+    setSearch('');
+  
      };
-     
      
   return (
     <form onSubmit={handleChange}>
@@ -29,11 +26,8 @@ import { BiSearch } from 'react-icons/bi';
         <Input
           type="text"
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={e =>   setSearch(e.target.value)}
           placeholder="Search Characters"
-          onSubmit={e => {
-            e.preventDefault();
-          }}
               />
               <div>
               <BiSearch  color="gray" size="20px"/>

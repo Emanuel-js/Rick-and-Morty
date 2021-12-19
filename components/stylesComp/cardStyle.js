@@ -47,6 +47,7 @@ font-weight:bold;
 font-size:16px;
 `;
 export const LikeIcon = styled.div`
+cursor: pointer;
 position:absolute;
 top:15px;
 right:20px;

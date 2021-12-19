@@ -7,18 +7,18 @@ import {
   ModalWrapper,
 
 } from "./stylesComp/modelStyle";
-import { AiFillHeart, AiOutlineCloseCircle } from 'react-icons/ai';
+import { AiFillHeart,AiOutlineHeart, AiOutlineCloseCircle } from 'react-icons/ai';
 import Card from './DetailCard';
 
 
-export default function Model({ setOpenModel, openModel ,data}) {
+export default function Model({ setOpenModel, openModel ,data,like,handleLikes}) {
 	const modalRef = useRef();
 	const closeModal = (e) => {
 		if (modalRef.current === e.target) {
 			setOpenModel(false);
 		}
 	};
-console.log(data);
+
 	return (
 		<>
 			{openModel ? (
@@ -29,8 +29,10 @@ console.log(data);
                 <img className={"imgs"} src={data.image} />
                 <div className={"title"}>{data.name}</div>
              
-                <div className={"like"}>
-                <AiFillHeart size="25px" color="E9E84E"/>
+                <div className={"like"} onClick={(e)=>handleLikes(data.id)}>
+               
+               {!like?<AiOutlineHeart size="25px" color="E9E84E"/>: <AiFillHeart size="25px" color="E9E84E"/>}
+          
                  </div>
               
               </div>

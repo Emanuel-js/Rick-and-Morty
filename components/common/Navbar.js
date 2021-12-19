@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Search from '../Search';
-import { BsFillMoonFill,BsMoonFill} from 'react-icons/bs';
+import { BsFillMoonFill, BsMoonFill } from 'react-icons/bs';
+import Link from 'next/link';
 
 const Container = styled.div`
 display:flex;
@@ -10,13 +11,14 @@ box-shadow: 0px 0px 3px ${props=>props.theme.input};
 
 `;
 
-const LogoContainer = styled.div`
+const LogoContainer = styled(Link)`
 margin-left:30px;
 margin-top:10px;
-
+cursor: pointer;
 `;
 const Logo = styled.img`
 width:250px;
+cursor: pointer;
 `;
 const Icon = styled.div`
 
@@ -41,7 +43,7 @@ export default function Navbar({theme,setTheme}) {
     
     return (
         <Container>
-            <LogoContainer>
+            <LogoContainer href="/">
                 <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/320px-Rick_and_Morty.svg.png"/>
             </LogoContainer>
             <SearchContainer>

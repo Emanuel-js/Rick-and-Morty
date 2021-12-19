@@ -32,7 +32,7 @@ const Container = styled.div`
     .title{
         font-weight: bold;
         font-size: 18px;
-        margin-left:28px;
+        margin-left:36px;
     }
     .icon{
         text-align: center;
