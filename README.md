@@ -1,34 +1,100 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **React Developers | Coding Challenge**
 
-## Getting Started
+![Logo!](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/320px-Rick_and_Morty.svg.png)
 
-First, run the development server:
+## **Table of content 🗜️**
 
-```bash
-npm run dev
-# or
-yarn dev
+- [Features](#features-)
+- [Technologies](#technologies-)
+- [Screenshots](#screenshots-)
+- [API](#api-%EF%B8%8F)
+- [Author](#author)
+
+## project []
+### ***Features*** 🔭
+
+- List All Characters
+- List Each Character’s Episodes
+- Dark and Light modes
+- Searching characters by name
+- Liking or disliking characters
+
+
+## **Technologies** <img width="30px" src="https://img.icons8.com/fluency/48/000000/chatbot.png"/>
+
+- NextJs
+- ReactJs
+- GraphQL(Apollo Client)
+- StyledComponents
+- React Context
+
+> Dependencies
+
+| Package Names | Version |
+| --- | --- |
+|graphql|16.2.0|
+|next|12.0.7|
+|react-icons|4.3.1|
+|react|17.0.2|
+|styled-components|5.3.3|
+|  |  |
+
+>Tools
+- Git & GitHub
+- VsCode
+- CMD
+
+## **Screenshots 📷** 
+
+> Light Theme
+
+<img width=60% src="https://imgur.com/5ilruy7.png" >
+
+<img width=60% src="https://imgur.com/zqd5iv2.png" >
+
+> Dark Theme
+
+<img width=60% src="https://imgur.com/VGiXGix.png" >
+
+<img width=60% src="https://imgur.com/0QHOBeR.png" >
+
+## **API ⚙️**
+> https://rickandmortyapi.com/graphql
+***Sample query***
+```gql
+
+ query {
+            characters(page: 1) {
+              info {
+                count
+                pages
+              }
+              results {
+                name
+                id
+                species
+                location {
+                  name
+                  id
+                }
+                image
+                origin {
+                  name
+                  id
+                }
+                episode {
+                  id
+                  episode
+                  air_date
+                }
+              }
+            }
+          }
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **Author**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+> Meet Amanuel Awol <img width="25px" src="https://img.icons8.com/external-linector-flat-linector/64/000000/external-avatar-man-avatar-linector-flat-linector-4.png"/>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I'm a full stack software engineer who enjoys both backend work and frontend work, taking charge of tasks from design to deployment. I have a deep understanding of the MEAN stack and proficiency in many languages. I am always eager to learn new technologies, frameworks, and languages because it is my passion.
