@@ -19,19 +19,19 @@ const Container = styled.div`
 	}
 	.episode {
 		display: flex;
-		margin: 10px;
+		
 	}
 	.episode-e {
-		margin-left: 10px;
+		margin-left: 5px;
 		font-weight: bold;
 	}
 	.episode-title {
-		margin-left: 10px;
+		margin-left: 5px;
 		color: ${(props) => props.theme.subtitle};
 	}
     .title{
         font-weight: bold;
-        font-size: 20px;
+        font-size: 18px;
         margin-left:28px;
     }
     .icon{
