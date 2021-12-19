@@ -42,6 +42,7 @@ export default function Card(props) {
 
           
     }
+    console.log(character);
     return (
         <>
     
@@ -57,7 +58,7 @@ export default function Card(props) {
                     </div>
                     <div>
                     <Subtitle>Species</Subtitle>
-                        <Bold >{character?.species ||'Human'}</Bold>
+                        <Bold >{character?.species}</Bold>
                     </div>
                 </InfoContainer>
                 

@@ -13,18 +13,19 @@ export default function search() {
 	const router = useRouter();
 
 	const query = router.query.search;
-	const [characters, setCharacters] = useState(null);
-    const [search, setSearch] = useState(query);
+	 const [characters, setCharacters] = useState(null);
+    // const [search, setSearch] = useState(query);
     const [loading, setLoading] = useState(true);
 	useEffect(() => {
 		const handleSearch = async () => {
 			const results = await fetch("/api/characters", {
 				method: "post",
-				body: search,
+				body: query,
 			});
 			const { characters, error } = await results.json();
 			if (error) {
-				route.replace("/");
+				router.replace("/");
+				alert("Not Found 😞");
 			} else {
                 setCharacters(characters);
                 setLoading(false);
@@ -32,7 +33,7 @@ export default function search() {
 		};
 
 		handleSearch();
-	}, []);
+	}, [query]);
     if (loading) {
         return <div class="lds-hourglass"></div>
       }
