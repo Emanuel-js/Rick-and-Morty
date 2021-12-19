@@ -18,6 +18,7 @@ export default async (req, res) => {
             results {
               name
               id
+              species
               location {
                 name
                 id
