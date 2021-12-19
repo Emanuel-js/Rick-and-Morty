@@ -44,7 +44,7 @@ const Container = styled.div`
 export default function DetailCard({ episode }) {
 	return (
 		<Container>
-			<div className={"title"}>Pilot</div>
+			<div className={"title"}>{episode.name}</div>
 			<div className={"episode-wrapper"}>
 				<div className={"episode"}>
 					<div className={"icon"}>

@@ -29,6 +29,7 @@ export default async (req, res) => {
                 id
               }
               episode {
+                name
                 id
                 episode
                 air_date

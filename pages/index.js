@@ -44,6 +44,7 @@ export default function Home() {
                   id
                   episode
                   air_date
+                  name
                 }
               }
             }
