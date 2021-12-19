@@ -31,7 +31,6 @@ export default function Card(props) {
  
     const handleLikes = (id) => {
        
-       
         const value = likeControl(like, id);
         
         if (value.id === id) {
@@ -42,7 +41,6 @@ export default function Card(props) {
 
           
     }
-    console.log(character);
     return (
         <>
     

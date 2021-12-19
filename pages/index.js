@@ -56,7 +56,7 @@ export default function Home() {
     getData();
   })
   if (loading) {
-    return <div class="lds-hourglass"></div>
+    return <div className="lds-hourglass"></div>
   }
 
   return (
