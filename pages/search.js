@@ -31,11 +31,8 @@ export default function Search() {
 			}
 		};
 
-		return (
-			handleSearch()
-		);
-
-	}, []);
+		handleSearch();
+	}, [query]);
     if (loading) {
         return <div className="lds-hourglass"></div>
       }
